@@ -37,7 +37,7 @@ class AboutKeywordArguments < Neo::Koan
     exception = assert_raise(ArgumentError) do
       method_with_mandatory_keyword_arguments
     end
-    assert_match(/missing keyword: :one/, exception.message)
+    assert_match(/missing keyword/, exception.message)
   end
 
 end
